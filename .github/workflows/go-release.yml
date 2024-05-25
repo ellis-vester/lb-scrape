@@ -15,7 +15,7 @@ jobs:
     - uses: actions/checkout@v4
     - uses: wangyoucao577/go-release-action@v1.33
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.GH_ACTIONS_TOKEN }}
         build_command: "go build -o ./bin/lbs"
         goos: ${{ matrix.goos }}
         goarch: ${{ matrix.goarch }}
