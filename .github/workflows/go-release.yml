@@ -20,4 +20,5 @@ jobs:
         goarch: ${{ matrix.goarch }}
         extra_files: LICENSE README.md
         goversion: 'https://go.dev/dl/go1.22.3.linux-amd64.tar.gz'
-        binary_name: lbs
+        binary_name: 'lbs'
+        release_name: '${{ github.event.release.name }}'
