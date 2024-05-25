@@ -16,9 +16,8 @@ jobs:
     - uses: wangyoucao577/go-release-action@v1.33
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        goversion: "1.22"
         build_command: "go build -o ./bin/lbs"
         goos: ${{ matrix.goos }}
         goarch: ${{ matrix.goarch }}
         extra_files: LICENSE README.md
-
+        goversion: 'https://go.dev/dl/go1.22.3.linux-amd64.tar.gz'
