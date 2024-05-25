@@ -1,0 +1,35 @@
+output:
+  formats: 
+  - format: 'colored-line-number'
+linters:
+  enable:
+    - 'errcheck'
+    - 'gosimple'
+    - 'govet'
+    - 'ineffassign'
+    - 'staticcheck'
+    - 'typecheck'
+    - 'unused'
+    - 'gocyclo'
+    - 'goconst'
+    - 'misspell'
+    - 'revive'
+    - 'unconvert'
+    - 'unparam'
+    - 'bodyclose'
+    - 'nakedret'
+    - 'tparallel'
+issues:
+  exclude-use-default: false
+
+linters-settings:
+  revive:
+    ignore-generated-header: true
+    severity: warning
+    rules:
+      - name: line-length-limit
+        severity: warn
+        arguments: [90]
+        exclude: ["TEST"]
+      - name: package-comments
+        Disabled: true
